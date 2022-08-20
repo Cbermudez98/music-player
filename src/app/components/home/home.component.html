@@ -1,16 +1,10 @@
-<div class="container" style="width: 25%;">
-  <div class="mb-3">
-    <label for="formFile" class="form-label">Seleccione una cancion</label>
-    <input #musicInput class="form-control" type="file" (change)="selectSong($event)" id="formFile">
-    <audio id="reproductor" [src]="src"></audio>
-  </div>
-
-  <div class="card" style="width: 18rem;" *ngIf="nameSong">
-    <img [src]="dvd" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{ nameSong }}</h5>
-      <button class="btn btn-dark mx-2" (click)="play()"><i class="fa-solid fa-play"></i></button>
-      <button class="btn btn-dark mx-2" (click)="stop()"><i class="fa-solid fa-circle-stop"></i></button>
+<div class="container">
+  <div class="row">
+    <div class="col-6 col-md-6">
+      <app-reproducer (songSelected)="songSelected($event)"></app-reproducer>
+    </div>
+    <div class="col-6 col-md-6">
+      <app-list-songs></app-list-songs>
     </div>
   </div>
 </div>

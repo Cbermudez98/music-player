@@ -5,11 +5,11 @@ import { ToastrService } from 'ngx-toastr';
 import { song } from 'src/app/entities/song';
 import { SongService } from 'src/app/services/song.service';
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-reproducer',
+  templateUrl: './reproducer.component.html',
+  styleUrls: ['./reproducer.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class ReproducerComponent implements OnInit {
   @ViewChild("musicInput") music!: ElementRef;
   public src: any;
   public reproductor: any;
